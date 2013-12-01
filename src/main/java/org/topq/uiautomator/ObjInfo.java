@@ -3,6 +3,7 @@ package org.topq.uiautomator;
 import com.android.uiautomator.core.UiObject;
 import com.android.uiautomator.core.UiObjectNotFoundException;
 import com.android.uiautomator.core.UiSelector;
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 public class ObjInfo {
 
@@ -13,172 +14,178 @@ public class ObjInfo {
     public static final ObjInfo getObjInfo(UiSelector selector) throws UiObjectNotFoundException {
         return new ObjInfo(new UiObject(selector));
     }
-
-	private ObjInfo(UiObject obj) throws UiObjectNotFoundException {
-		this._bounds = Rect.from(obj.getBounds());
-		this._checkable = obj.isCheckable();
-		this._checked = obj.isChecked();
-		this._chileCount = obj.getChildCount();
-		this._clickable = obj.isClickable();
-		this._contentDescription = obj.getContentDescription();
-		this._enabled = obj.isEnabled();
-		this._focusable = obj.isFocusable();
-		this._focused = obj.isFocused();
-		this._longClickable = obj.isLongClickable();
-		this._packageName = obj.getPackageName();
-		this._scrollable = obj.isScrollable();
-		this._selected = obj.isSelected();
-		this._text = obj.getText();
+    
+    public ObjInfo() {
+		// TODO Auto-generated constructor stub
+	}
+    
+   
+    
+	public ObjInfo(UiObject obj) throws UiObjectNotFoundException {
+		this.bounds = Rect.from(obj.getBounds());
+		this.checkable = obj.isCheckable();
+		this.checked = obj.isChecked();
+		this.chileCount = obj.getChildCount();
+		this.clickable = obj.isClickable();
+		this.contentDescription = obj.getContentDescription();
+		this.enabled = obj.isEnabled();
+		this.focusable = obj.isFocusable();
+		this.focused = obj.isFocused();
+		this.longClickable = obj.isLongClickable();
+		this.packageName = obj.getPackageName();
+		this.scrollable = obj.isScrollable();
+		this.selected = obj.isSelected();
+		this.text = obj.getText();
 		if (android.os.Build.VERSION.SDK_INT >= 17) {
-			this._visibleBounds = Rect.from(obj.getVisibleBounds());
+			this.visibleBounds = Rect.from(obj.getVisibleBounds());
 		}
 		if (android.os.Build.VERSION.SDK_INT >= 18) {
-			this._className = obj.getClassName();
+			this.className = obj.getClassName();
 		}
 	}
 
-	private Rect _bounds;
-	private Rect _visibleBounds;
-	private int _chileCount;
-	private String _className;
-	private String _contentDescription;
-	private String _packageName;
-	private String _text;
-	private boolean _checkable;
-	private boolean _checked;
-	private boolean _clickable;
-	private boolean _enabled;
-	private boolean _focusable;
-	private boolean _focused;
-	private boolean _longClickable;
-	private boolean _scrollable;
-	private boolean _selected;
+	private Rect bounds;
+	private Rect visibleBounds;
+	private int chileCount;
+	private String className;
+	private String contentDescription;
+	private String packageName;
+	private String text;
+	private boolean checkable;
+	private boolean checked;
+	private boolean clickable;
+	private boolean enabled;
+	private boolean focusable;
+	private boolean focused;
+	private boolean longClickable;
+	private boolean scrollable;
+	private boolean selected;
 
 	public Rect getBounds() {
-		return _bounds;
+		return bounds;
 	}
 
 	public void setBounds(Rect bounds) {
-		this._bounds = bounds;
+		this.bounds = bounds;
 	}
 
 	public Rect getVisibleBounds() {
-		return _visibleBounds;
+		return visibleBounds;
 	}
 
 	public void setVisibleBounds(Rect visibleBounds) {
-		this._visibleBounds = visibleBounds;
+		this.visibleBounds = visibleBounds;
 	}
 
 	public int getChileCount() {
-		return _chileCount;
+		return chileCount;
 	}
 
 	public void setChileCount(int chileCount) {
-		this._chileCount = chileCount;
+		this.chileCount = chileCount;
 	}
 
 	public String getClassName() {
-		return _className;
+		return className;
 	}
 
 	public void setClassName(String className) {
-		this._className = className;
+		this.className = className;
 	}
 
 	public String getContentDescription() {
-		return _contentDescription;
+		return contentDescription;
 	}
 
 	public void setContentDescription(String contentDescription) {
-		this._contentDescription = contentDescription;
+		this.contentDescription = contentDescription;
 	}
 
 	public String getPackageName() {
-		return _packageName;
+		return packageName;
 	}
 
 	public void setPackageName(String packageName) {
-		this._packageName = packageName;
+		this.packageName = packageName;
 	}
 
 	public String getText() {
-		return _text;
+		return text;
 	}
 
 	public void setText(String text) {
-		this._text = text;
+		this.text = text;
 	}
 
 	public boolean isCheckable() {
-		return _checkable;
+		return checkable;
 	}
 
 	public void setCheckable(boolean checkable) {
-		this._checkable = checkable;
+		this.checkable = checkable;
 	}
 
 	public boolean isChecked() {
-		return _checked;
+		return checked;
 	}
 
 	public void setChecked(boolean checked) {
-		this._checked = checked;
+		this.checked = checked;
 	}
 
 	public boolean isClickable() {
-		return _clickable;
+		return clickable;
 	}
 
 	public void setClickable(boolean clickable) {
-		this._clickable = clickable;
+		this.clickable = clickable;
 	}
 
 	public boolean isEnabled() {
-		return _enabled;
+		return enabled;
 	}
 
 	public void setEnabled(boolean enabled) {
-		this._enabled = enabled;
+		this.enabled = enabled;
 	}
 
 	public boolean isFocusable() {
-		return _focusable;
+		return focusable;
 	}
 
 	public void setFocusable(boolean focusable) {
-		this._focusable = focusable;
+		this.focusable = focusable;
 	}
 
 	public boolean isFocused() {
-		return _focused;
+		return focused;
 	}
 
 	public void setFocused(boolean focused) {
-		this._focused = focused;
+		this.focused = focused;
 	}
 
 	public boolean isLongClickable() {
-		return _longClickable;
+		return longClickable;
 	}
 
 	public void setLongClickable(boolean longClickable) {
-		this._longClickable = longClickable;
+		this.longClickable = longClickable;
 	}
 
 	public boolean isScrollable() {
-		return _scrollable;
+		return scrollable;
 	}
 
 	public void setScrollable(boolean scrollable) {
-		this._scrollable = scrollable;
+		this.scrollable = scrollable;
 	}
 
 	public boolean isSelected() {
-		return _selected;
+		return selected;
 	}
 
 	public void setSelected(boolean selected) {
-		this._selected = selected;
+		this.selected = selected;
 	}
 }

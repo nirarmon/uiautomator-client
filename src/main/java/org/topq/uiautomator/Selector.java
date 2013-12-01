@@ -263,137 +263,164 @@ public class Selector {
 		return mask;
 	}
 	
-	public void setText(String _text) {
+	public Selector setText(String _text) {
 		this.mask+=MASK_TEXT;
 		this.text = _text;
+		return this;
 	}
 
-	public void set_textContains(String _textContains) {
+	public Selector setTextContains(String _textContains) {
 		mask+=MASK_TEXTCONTAINS;
 		this.textContains = _textContains;
+		return this;
 	}
 
-	public void setTextMatches(String _textMatches) {
+	public Selector setTextMatches(String _textMatches) {
 		mask+=MASK_TEXTMATCHES;
 		this.textMatches = _textMatches;
+		return this;
 	}
 
-	public void setTextStartsWith(String _textStartsWith) {
+	public Selector setTextStartsWith(String _textStartsWith) {
 		mask+=MASK_TEXTSTARTSWITH;
 		this.textStartsWith = _textStartsWith;
+		return this;
 	}
 
-	public void setClassName(String _className) {
+	public Selector setClassName(String _className) {
 		mask+=MASK_CLASSNAME;
 		this.className = _className;
+		return this;
 	}
 
-	public void setClassNameMatches(String _classNameMatches) {
+	public Selector setClassNameMatches(String _classNameMatches) {
 		mask+=MASK_CLASSNAMEMATCHES;
 		this.classNameMatches = _classNameMatches;
+		return this;
 	}
 
-	public void setDescription(String _description) {
+	public Selector setDescription(String _description) {
 		this.mask += MASK_DESCRIPTION;
 		this.description = _description;
+		return this;
 	}
 
-	public void setDescriptionContains(String _descriptionContains) {
+	public Selector setDescriptionContains(String _descriptionContains) {
 		mask+=MASK_DESCRIPTIONCONTAINS;
 		this.descriptionContains = _descriptionContains;
+		return this;
 	}
 
-	public void setDescriptionMatches(String _descriptionMatches) {
+	public Selector setDescriptionMatches(String _descriptionMatches) {
 		mask+=MASK_DESCRIPTIONMATCHES;
 		this.descriptionMatches = _descriptionMatches;
+		return this;
 	}
 
-	public void setDescriptionStartsWith(String _descriptionStartsWith) {
+	public Selector setDescriptionStartsWith(String _descriptionStartsWith) {
 		mask+=MASK_DESCRIPTIONSTARTSWITH;
 		this.descriptionStartsWith = _descriptionStartsWith;
+		return this;
 	}
 
-	public void setCheckable(boolean _checkable) {
+	public Selector setCheckable(boolean _checkable) {
 		mask+=MASK_CHECKABLE;
 		this.checkable = _checkable;
+		return this;
 	}
 
-	public void setChecked(boolean _checked) {
+	public Selector setChecked(boolean _checked) {
 		mask+=MASK_CHECKED;
 		this.checked = _checked;
+		return this;
 	}
 
-	public void setClickable(boolean _clickable) {
+	public Selector setClickable(boolean _clickable) {
 		mask+=MASK_CLICKABLE;
 		this.clickable = _clickable;
+		return this;
 	}
 
-	public void setLongClickable(boolean _longClickable) {
+	public Selector setLongClickable(boolean _longClickable) {
 		mask+=MASK_LONGCLICKABLE;
 		this.longClickable = _longClickable;
+		return this;
 	}
 
-	public void setScrollable(boolean _scrollable) {
+	public Selector setScrollable(boolean _scrollable) {
 		mask+=MASK_SCROLLABLE;
 		this.scrollable = _scrollable;
+		return this;
 	}
 
-	public void setEnabled(boolean _enabled) {
+	public Selector setEnabled(boolean _enabled) {
 		mask+=MASK_ENABLED;
 		this.enabled = _enabled;
+		return this;
 	}
 
-	public void setFocusable(boolean _focusable) {
+	public Selector setFocusable(boolean _focusable) {
 		mask+=MASK_FOCUSABLE;
 		this.focusable = _focusable;
+		return this;
 	}
 
-	public void setFocused(boolean _focused) {
+	public Selector setFocused(boolean _focused) {
 		mask+=MASK_FOCUSED;
 		this.focused = _focused;
+		return this;
 	}
 
-	public void setSelected(boolean _selected) {
+	public Selector setSelected(boolean _selected) {
 		mask+=MASK_SELECTED;
 		this.selected = _selected;
+		return this;
 	}
 
-	public void setPackageName(String _packageName) {
+	public Selector setPackageName(String _packageName) {
 		mask+=MASK_PACKAGENAME;
 		this.packageName = _packageName;
+		return this;
 	}
 
-	public void setPackageNameMatches(String _packageNameMatches) {
+	public Selector setPackageNameMatches(String _packageNameMatches) {
 		mask+=MASK_PACKAGENAMEMATCHES;
 		this.packageNameMatches = _packageNameMatches;
+		return this;
 	}
 
-	public void setResourceId(String _resourceId) {
+	public Selector setResourceId(String _resourceId) {
 		mask+=MASK_RESOURCEID;
 		this.resourceId = _resourceId;
+		return this;
 	}
 
-	public void setResourceIdMatches(String _resourceIdMatches) {
+	public Selector setResourceIdMatches(String _resourceIdMatches) {
 		mask+=MASK_RESOURCEIDMATCHES;
 		this.resourceIdMatches = _resourceIdMatches;
+		return this;
 	}
 
-	public void setIndex(int _index) {
+	public Selector setIndex(int _index) {
 		mask+=MASK_INDEX;
 		this.index = _index;
+		return this;
 	}
 
-	public void setInstance(int _instance) {
+	public Selector setInstance(int _instance) {
 		mask+=MASK_INSTANCE;
 		this.instance = _instance;
+		return this;
 	}
 
-	public void setChildOrSiblingSelector(Selector[] _childOrSiblingSelector) {
+	public Selector setChildOrSiblingSelector(Selector[] _childOrSiblingSelector) {
 		this.childOrSiblingSelector = _childOrSiblingSelector;
+		return this;
 	}
 
-	public void setChildOrSibling(String[] _childOrSibling) {
+	public Selector setChildOrSibling(String[] _childOrSibling) {
 		this.childOrSibling = _childOrSibling;
+		return this;
 	}
 
 	public void set_mask(long _mask) {
